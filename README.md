@@ -1,4 +1,4 @@
-Teaching resources and Class activities
+Teaching resources and class activities
 ====================================
 
 [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
