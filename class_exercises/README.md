@@ -202,7 +202,7 @@ int main(int argc, char* argv[])
 ```
 ## Mitigation
 Avoid the race condition by accessing directly the file, and don't overwrite it if it already exists.
-
+```c
 #include <unistd.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -236,7 +236,7 @@ int main(int argc, char* argv[])
     /* fd is already closed by fclose()!!! */
     return EXIT_SUCCESS;
 }
-
+```
 
 
 ## General Mitigation Strategies
@@ -263,5 +263,5 @@ int main(int argc, char* argv[])
 
 [OWASP Buffer Overflow Attack]:https://owasp.org/www-community/attacks/Buffer_overflow_attack
 [Veracode: What Is a Buffer Overflow? Learn About Buffer Overrun Vulnerabilities, Exploits & Attacks]:https://www.veracode.com/security/buffer-overflow
-[Common vulnerabilities guide for C programmers]
+[Common vulnerabilities guide for C programmers]:https://security.web.cern.ch/recommendations/en/codetools/cpp.shtml
 
