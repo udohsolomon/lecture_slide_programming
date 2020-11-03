@@ -92,4 +92,8 @@ Stack level 0, frame at 0x7fffffffdde0:
 7. Review legacy software code for security problems.
 
 ## References
-* [OWASP Buffer Overflow Attack]:https://owasp.org/www-community/attacks/Buffer_overflow_attack
+* [OWASP Buffer Overflow Attack]
+* [Veracode: What Is a Buffer Overflow? Learn About Buffer Overrun Vulnerabilities, Exploits & Attacks]
+
+[OWASP Buffer Overflow Attack]:https://owasp.org/www-community/attacks/Buffer_overflow_attack
+[Veracode: What Is a Buffer Overflow? Learn About Buffer Overrun Vulnerabilities, Exploits & Attacks]:https://www.veracode.com/security/buffer-overflow
