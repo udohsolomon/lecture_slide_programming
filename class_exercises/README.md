@@ -9,7 +9,7 @@ To effectively mitigate buffer overflow vulnerabilities, it is important to unde
 
 ## Vulnerabilities
 
-### gets()
+## gets()
 The stdio gets() function does not check for buffer length and always results in a vulnerability.
 
 ```c
@@ -30,7 +30,7 @@ int main () {
     return 0;
 }
 ```
-## Mitigation
+### Mitigation
 Prefer using fgets (and dynamically allocated memory!):
 ```c
 #include <stdio.h>
@@ -70,7 +70,7 @@ char str2[]="abcdefghijklmn";
 strcpy(str1,str2);
 ```
 
-## Mitigation
+### Mitigation
 The best way to mitigate this issue is to use strlcpy if it is readily available (which is only the case on BSD systems). However, it is very simple to define it yourself, as shown below:
 
 ```c
@@ -116,7 +116,7 @@ int main() {
     return EXIT_SUCCESS;
 }
 ```
-## Mitigation
+### Mitigation
 Prefer using snprintf, which has the double advantage of preventing buffers overflows and returning the minimal size of buffer needed to fit the whole formatted string.
 ```c
 #include <stdio.h>
@@ -161,7 +161,7 @@ $ ./FormatString %s
 This is a secret!
 $
 ```
-## Mitigation
+### Mitigation
 It's really simple: always hardcode the format string. At least, never let it come directly from any user's input.
 
 ## File opening
@@ -200,7 +200,7 @@ int main(int argc, char* argv[])
     return EXIT_SUCCESS;
 }
 ```
-## Mitigation
+### Mitigation
 Avoid the race condition by accessing directly the file, and don't overwrite it if it already exists.
 ```c
 #include <unistd.h>
