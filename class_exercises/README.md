@@ -73,6 +73,8 @@ Stack level 0, frame at 0x7fffffffdde0:
 0x7fffffffde00:	0x61616161	0x61616161	0x61616161	0x61616161
 0x7fffffffde10:	0x61616161	0x00007f00	0x00000000	0x00000000
 ```
+In the above example, the program can be exploited to give an attacker a root privilege, even though the user entered an incorrect password. In this case, the attacker supplied an input with a length greater than the buffer can hold, creating buffer overflow, which overwrote the memory of integer “SUCCESS” Therefore, despite the incorrect ```givenPassword```, the value of ```aaaaaaaaaa...``` became non zero, and an attacker can exploit this vulnerability by using a shellcode to gain root privileges.
+
 ## Mitigation 
 1. Address space randomization (ASLR)—randomly moves around the address space locations of data regions. Typically, buffer overflow attacks need to know the locality of executable code, and randomizing address spaces makes this virtually impossible.
 2. Data execution prevention—flags certain areas of memory as non-executable or executable, which stops an attack from running code in a non-executable region.
